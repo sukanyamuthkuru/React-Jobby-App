@@ -1,0 +1,15 @@
+.profileSection-success-container {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/profile-bg.png');
+  background-size: cover;
+  padding: 15px;
+  max-width: 35vw;
+  border-radius: 15px;
+}
+.profile-heading {
+  color: #6366f1;
+  font-family: 'roboto';
+}
+.profile-description {
+  color: #7e858e;
+  font-family: 'Roboto';
+}
