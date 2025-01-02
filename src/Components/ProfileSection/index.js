@@ -94,6 +94,10 @@ class ProfileSection extends Component {
     console.log(typeArray)
   }
 
+  onChangesalaryRange = string => {
+    this.setState({salaryRangeInput: string}, this.getJobs)
+  }
+
   onClickSearch = async () => {
     this.getJobs()
   }
@@ -309,7 +313,11 @@ class ProfileSection extends Component {
             <p className="filetrs-heading">Salary Range</p>
             <ul>
               {salaryRangesList.map(each => (
-                <SalaryRangeList key={each.salaryRangeId} list={each} />
+                <SalaryRangeList
+                  key={each.salaryRangeId}
+                  list={each}
+                  salaryRangeF={this.onChangesalaryRange}
+                />
               ))}
             </ul>
           </div>
