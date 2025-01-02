@@ -65,7 +65,7 @@ class ProfileSection extends Component {
     salaryRangeInput: '',
     searchInput: '',
     jobsApiStatus: apiStatusConstants.initial,
-    jobs: [],
+    jobs: '',
   }
 
   componentDidMount() {
@@ -204,7 +204,7 @@ class ProfileSection extends Component {
   renderJobs = () => {
     const {jobsApiStatus, jobs} = this.state
 
-    if (jobs !== [] && jobs.length === 0) {
+    if (jobs !== '' && jobs.length === 0) {
       return (
         <div className="no-jobs-container">
           <img
