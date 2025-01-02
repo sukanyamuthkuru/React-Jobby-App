@@ -2,8 +2,9 @@
   background-image: url('https://assets.ccbp.in/frontend/react-js/profile-bg.png');
   background-size: cover;
   padding: 15px;
-  max-width: 35vw;
-  border-radius: 15px;
+  max-width: 20vw;
+  border-radius: 30px;
+  margin-left: 30px;
 }
 .profile-heading {
   color: #6366f1;
@@ -12,4 +13,95 @@
 .profile-description {
   color: #7e858e;
   font-family: 'Roboto';
+}
+.profileSection-retry-button {
+  color: white;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #6366f1;
+  font-weight: 500;
+  font-family: 'Roboto';
+  min-width: 8vw;
+  max-height: 6vh;
+  margin-top: 10px;
+}
+.profile-and-filters-container {
+  max-width: 20vw;
+  padding: 10px;
+  min-width: 20vw;
+}
+.jobs-horizontal-rular {
+  border-color: #cbd5e1;
+  border-radius: 1px;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.filetrs-heading {
+  color: white;
+  font-weight: bold;
+  margin-left: 30px;
+  font-family: 'Roboto';
+}
+.jobs-container {
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  padding: 30px;
+  min-height: 100vh;
+  padding-left: 30px;
+}
+.search-input-and-jobs-container {
+  margin-left: 30px;
+  padding: 10px;
+}
+.search-input-container {
+  display: flex;
+  flex-direction: row;
+  max-width: 30.3vw;
+  border: solid 2px #7e858e;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding-right: 3px;
+}
+.search-input {
+  background-color: transparent;
+  padding: 10px;
+  border: none;
+  color: white;
+  min-width: 25vw;
+}
+.search-icon {
+  background-color: #272727;
+  border: none;
+  padding: 10px;
+  min-width: 5vw;
+  color: white;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  margin-right: 0px;
+}
+.job-list-container {
+  padding: 0px;
+}
+.jobs-failure-view-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.jobs-failure-view-heading {
+  color: white;
+  font-family: 'Roboto';
+}
+.jobs-failure-view-para {
+  color: white;
+  font-family: 'roboto';
+}
+.loader-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }

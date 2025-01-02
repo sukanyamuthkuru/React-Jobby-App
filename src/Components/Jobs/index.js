@@ -5,7 +5,7 @@ import ProfileSection from '../ProfileSection'
 
 import './index.css'
 
-const Jobs = props => {
+const Jobs = () => {
   const jwtToken = Cookies.get('jwt_token')
   if (jwtToken === undefined) {
     return <Redirect to="/login" />
@@ -14,9 +14,8 @@ const Jobs = props => {
   return (
     <>
       <Header />
-      <div className="profile-section-container">
-        <ProfileSection />
-      </div>
+
+      <ProfileSection />
     </>
   )
 }
