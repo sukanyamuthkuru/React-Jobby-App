@@ -2,6 +2,7 @@ import {Switch, Route} from 'react-router-dom'
 import LoginForm from './Components/LoginForm'
 import Home from './Components/Home'
 import Jobs from './Components/Jobs'
+import JobDetailsRoute from './Components/JobDetailsRoute'
 import './App.css'
 
 // These are the lists used in the application. You can move them to any component needed.
@@ -49,6 +50,7 @@ const App = () => (
     <Route exact path="/login" component={LoginForm} />
     <Route exact path="/" component={Home} />
     <Route exact path="/jobs" component={Jobs} />
+    <Route exact path="/jobs/:id" component={JobDetailsRoute} />
   </Switch>
 )
 

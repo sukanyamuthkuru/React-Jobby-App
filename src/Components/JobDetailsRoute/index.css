@@ -1,0 +1,10 @@
+.job-details-container {
+  background-color: black;
+  padding: 60px;
+  min-height: 90vh;
+}
+.details-container {
+  background-color: #272727;
+  border-radius: 10px;
+  padding: 20px;
+}

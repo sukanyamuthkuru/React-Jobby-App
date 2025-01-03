@@ -1,11 +1,17 @@
+import {withRouter} from 'react-router-dom'
 import {BsStarFill} from 'react-icons/bs'
 import {MdPlace, MdWork} from 'react-icons/md'
 import './index.css'
 
 const DisplayJobs = props => {
-  const {job} = props
+  const {job, onClickJobs} = props
+  const onClickjob = () => {
+    const {history} = props
+    history.replace(`/jobs/${job.id}`)
+  }
+
   return (
-    <li className="jobs-list-item-container">
+    <li className="jobs-list-item-container" onClick={onClickjob}>
       <div className="company-logo-designation-rating-container">
         <img
           src={job.companyLogoUrl}
@@ -40,4 +46,4 @@ const DisplayJobs = props => {
   )
 }
 
-export default DisplayJobs
+export default withRouter(DisplayJobs)

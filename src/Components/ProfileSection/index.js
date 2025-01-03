@@ -172,13 +172,21 @@ class ProfileSection extends Component {
     }
   }
 
+  onClickjobb = id => {
+    console.log(id)
+  }
+
   renderJobsSuccessView = () => {
     const {jobs} = this.state
 
     return (
       <ul className="job-list-container">
         {jobs.map(each => (
-          <DisplayJobs key={each.id} job={each} />
+          <DisplayJobs
+            key={each.id}
+            job={each}
+            onClickJobs={this.onClickjobb}
+          />
         ))}
       </ul>
     )
