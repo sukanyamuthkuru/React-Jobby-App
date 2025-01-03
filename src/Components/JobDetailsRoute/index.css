@@ -8,3 +8,101 @@
   border-radius: 10px;
   padding: 20px;
 }
+.job-details-logo-rating-role-container {
+  display: flex;
+  flex-direction: row;
+}
+.job-details-company-logo {
+  max-width: 8vw;
+  max-height: 8vh;
+}
+.job-details-role-rating-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.job-detail-role-heading {
+  color: white;
+  font-family: 'Roboto';
+  font-weight: bold;
+  margin-top: 2px;
+  margin-bottom: 0px;
+}
+.job-detail-rating-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+.star-rating {
+  color: #fbbf24;
+}
+.rating-text-job-detail {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 5px;
+  color: white;
+  font-weight: bold;
+  font-family: 'roboto';
+}
+.job-detail-location-type-ctc-continer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.job-detail-location-type-container {
+  display: flex;
+  flex-direction: row;
+}
+.job-detail-location-logo-container {
+  display: flex;
+  flex-direction: row;
+  margin-right: 25px;
+}
+.job-detail-location-logo {
+  color: white;
+}
+.job-detail-location-text {
+  margin-top: 3px;
+  margin-bottom: 0px;
+  margin-left: 4px;
+  color: #f1f5f9;
+  font-family: 'Roboto';
+  font-size: 10px;
+}
+.job-detail-ctc {
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: bold;
+  margin-right: 5px;
+  margin-bottom: 9px;
+}
+
+.job-detail-horizontal-rural {
+  color: #f1f5f9;
+}
+.job-detail-description-visit-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.job-detail-anchor-text {
+  text-decoration: none;
+  color: #b6c5ff;
+}
+.link {
+  margin-left: 5px;
+}
+.job-details-description-text {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: white;
+  font-weight: bold;
+  font-family: 'Roboto';
+}
+.job-detail-description {
+  color: white;
+  font-family: 'Roboto';
+  font-size: 15px;
+}
