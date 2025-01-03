@@ -15,13 +15,36 @@ class JobDetailsRoute extends Component {
   state = {
     apiStatus: apiStatusConstants.initial,
     details: '',
+    similarJobs: '',
   }
 
   componentDidMount() {
-    const jwt = Cookies.get('jwt_token')
-    console.log(jwt)
     this.getJobdetails()
   }
+
+  getFormattedData = data => ({
+    companyLogoUrl: data.company_logo_url,
+    companyWebsiteUrl: data.company_website_url,
+    employmentType: data.employment_type,
+    id: data.id,
+    jobDescription: data.job_description,
+    lifeAtCompany: data.life_at_company,
+    location: data.location,
+    packagePerAnnum: data.package_per_annum,
+    rating: data.rating,
+    skills: data.skills,
+    title: data.title,
+  })
+
+  getFormattedSimilarJobsData = data => ({
+    companyLogoUrl: data.company_logo_url,
+    employmentType: data.employment_type,
+    id: data.id,
+    jobDescription: data.job_description,
+    location: data.location,
+    rating: data.rating,
+    title: data.title,
+  })
 
   getJobdetails = async () => {
     const {match} = this.props
@@ -32,9 +55,10 @@ class JobDetailsRoute extends Component {
 
     const jwtToken = Cookies.get('jwt_token')
     const options = {
-      header: {
+      headers: {
         authorization: `Bearer ${jwtToken}`,
       },
+      method: 'GET',
     }
 
     const url = `https://apis.ccbp.in/jobs/${id}`
@@ -42,6 +66,12 @@ class JobDetailsRoute extends Component {
     try {
       const response = await fetch(url, options)
       const data = await response.json()
+
+      const updatedDataJobData = this.getFormattedData(data.job_details)
+      const updatedSimilarJobsData = data.similar_jobs.map(each =>
+        this.getFormattedSimilarJobsData(each),
+      )
+      console.log(updatedSimilarJobsData)
     } catch {
       console.log('kkkk')
     }
@@ -59,7 +89,7 @@ class JobDetailsRoute extends Component {
         <div className="job-details-container">
           <div className="details-container">
             <div className="job-details-logo-rating-role-container">
-              <h>hiii</h>
+              <h1>hiii</h1>
             </div>
           </div>
         </div>
